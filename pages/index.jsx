@@ -17,22 +17,22 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <a href="/" className={styles.card}>
+          <a href="/cadastroAutores" className={styles.card}>
             <h2>Cadastrar Autor(a) &rarr;</h2>
             <p>Cadastre aqui seus autores.</p>
           </a>
 
-          <a href="/" className={styles.card}>
+          <a href="/cadastroLivros" className={styles.card}>
             <h2>Cadastrar Livro &rarr;</h2>
             <p>Cadastre aqui seus livros.</p>
           </a>
 
-          <a href="/" className={styles.card}>
+          <a href="/listaAutores" className={styles.card}>
             <h2>Vizualizar Autores &rarr;</h2>
             <p>Vizualize aqui todos os seus autores cadastrados.</p>
           </a>
 
-          <a href="/" className={styles.card}>
+          <a href="/listaLivros" className={styles.card}>
             <h2>Vizualizar Livros &rarr;</h2>
             <p>
               Vizualize aqui todos os seus livros cadastrados.
