@@ -4,8 +4,9 @@ import styles from '../styles/Home.module.css'
 
 export default function Autor () {
   return (
-    <><div className={styles.card}>
+    <> 
       <MenuHorizontal/>
+      <div className={styles.card}>
       <CadastroAutor/>
       </div>
     </>

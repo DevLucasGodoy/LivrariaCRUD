@@ -18,7 +18,14 @@ export default function ListagemAutor (props) {
     }
   return(
     <div className={styles.card}>
-     <b> <div className={styles.autores}><h3> <Link href={`/autor/${props.id}`}><a>{props.nome} {props.sobrenome}</a></Link></h3> Id: {props.id} <br/> Data de nascimento: {props.data_nascimento} </div> </b>
+     <b> 
+       <div className={styles.autores}>
+         <h3>
+           <Link href={`/autor/${props.id}`}><a><br/>{props.nome} <br/>{props.sobrenome}</a></Link>
+         </h3> 
+            Id: {props.id} <br/> Data de nascimento: {props.data_nascimento} 
+       </div> 
+     </b>
      
       <button className={styles.deletar} onClick={DeletarAutor}>Deletar</button>
     </div>

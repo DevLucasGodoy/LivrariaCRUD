@@ -21,64 +21,42 @@ export default function Cadastrol() {
       preco: form.preco,
     }
     console.log(data)
-    const autor_response = await api.post ('https://TrabalhoFinalPTAS.lauanexx.repl.co/livros', data)
+    const autor_response = await api.post ('https://livrariacrud-api.lucasgodoy04.repl.co/livros', data)
     console.log(autor_response);
     router.push('/livros')
   }
   return (
-    
     <div id="cadastro">
+      <form class="card" onSubmit={handleSubmit}>
+        <div class="card-header">
+          <h2>Bem Vindo(a)!</h2> Faça o cadastro de um livro.
+        </div>
+        
+        <div class="card-content">
+          <div class="card-content-area">
+            <label for="usuario"><br/>Nome<br/></label>
+            <input type="text" id="titulo" onChange= {handleInputChange} value = {form.titulo}/>
 
-             <form class="card" onSubmit={handleSubmit}>
-
-                 <div class="card-header">
-
-                   <h2>Bem Vindo(a)!</h2>
-           Faça o cadastro de um livro
-           em nossa biblioteca
-                 </div>
-
-                 <div class="card-content">
-
-                     <div class="card-content-area">
-
-                         <label for="usuario">Nome</label>
-
-                         <input type="text" id="titulo" onChange= {handleInputChange} value = {form.titulo}/>
+            <label for="usuario"><br/>Autor<br/></label>
+            <input type="text" id="autor" onChange= {handleInputChange} value = {form.autor}/>
                        
-                        <label for="usuario">Autor</label>
-
-                         <input type="text" id="autor" onChange= {handleInputChange} value = {form.autor}/>
-                       
-                       <label for="usuario">Editora</label>
-
-                         <input type="text" id="editora" onChange= {handleInputChange} value = {form.editora}/>
-<label for="usuario">Preço</label>
-
-                         <input type="number" id="preço" onChange= {handleInputChange} value = {form.preco}/>
-                     </div>
-
-                     <div class="card-content-area">
-
-                         <label for="date">Data de Publicação:</label>
-
-                         <input type="date" onChange= {handleInputChange} value = {form.data}/>
-
-                     </div>
-
-                 </div>
-               
-                 <div class="card-footer">
-
-                  
-  <button class="submit" type="submit">CADASTRAR</button>
-                  
-
-                 </div>
-
-             </form>
-
-         </div>
-
+            <label for="usuario"><br/>Editora<br/></label>
+            <input type="text" id="editora" onChange= {handleInputChange} value = {form.editora}/>
+           
+            <label for="usuario"><br/>Preço<br/></label>
+            <input type="number" id="preço" onChange= {handleInputChange} value = {form.preco}/>
+        </div>
+          
+          <div class="card-content-area">
+            <label for="date"><br/>Data de Publicação:<br/></label>
+            <input type="date" onChange= {handleInputChange} value = {form.data}/>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <button class="submit" type="submit"><br/>CADASTRAR</button>
+        </div>
+      </form>
+    </div>
   )
 }

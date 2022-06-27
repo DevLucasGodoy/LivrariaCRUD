@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 export default function Livro () {
   return (
     <>
-      <div className={styles.card}>
       <MenuHorizontal/>
+      <div className={styles.card}>
       <CadastroLivro/>
       </div>
     </>

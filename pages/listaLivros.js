@@ -1,6 +1,7 @@
 import api from './api/api'
 import ListagemLivro from '/components/CardLivro.js'
 import MenuHorizontal from '../components/MenuHorizontal.js'
+import styles from '../styles/Home.module.css'
 
 export async function getServerSideProps() {
   const response = await api.get ('/livros')
@@ -16,8 +17,10 @@ export async function getServerSideProps() {
  export default function listaLivro({livro}) {
    return (
       <div>
-       <MenuHorizontal/>
-        <h1>Lista de livros</h1>
+        <MenuHorizontal/>
+         <h1 className={styles.title}>
+          <a>Autores Cadastrados</a>
+         </h1>
        {
          livro.map(lista => {
            return(

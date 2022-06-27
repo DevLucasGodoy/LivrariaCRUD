@@ -1,6 +1,7 @@
 import api from './api/api'
 import ListagemAutor from '/components/CardAutor.js'
 import MenuHorizontal from '../components/MenuHorizontal.js'
+import styles from '../styles/Home.module.css'
 
 export async function getServerSideProps() {
   const response = await api.get ('/autores')
@@ -17,7 +18,9 @@ export async function getServerSideProps() {
    return (
      <>
        <MenuHorizontal/>
-       <h1>Lista de autores</h1>
+        <h1 className={styles.title}>
+          <a>Autores Cadastrados</a>
+        </h1>
       <div>
        {
          autor.map(listar => {
