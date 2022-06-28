@@ -1,13 +1,10 @@
 .menu{
   background-color: #0070f3;
-  margin: 0 auto;
-  padding: 0;
   box-sizing: border-box;
 }
 
 .menu ul {
   list-style: none;
-  padding: 0;
 }
 
 .menu ul li {
@@ -16,21 +13,12 @@
 
 .menu ul li a {
   color: #FFF;
-  padding: 20px;
+  padding: 30px;
   display: inline-block;
   text-decoration: none;
-  transition: background .4s;
-}
-
-.menu ul li a:hover {
-  background-color: #050019;
-}
-
-.menu ul li:first-child a {
-  margin: 5px;
+  float: center;
 }
 
 .menu ul li:last-child {
-  float: right;
-  margin: 4px;
+  float: center;
 }

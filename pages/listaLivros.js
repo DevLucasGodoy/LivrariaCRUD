@@ -19,7 +19,7 @@ export async function getServerSideProps() {
       <div>
         <MenuHorizontal/>
          <h1 className={styles.title}>
-          <a>Autores Cadastrados</a>
+          <a>Livros Cadastrados</a>
          </h1>
        {
          livro.map(lista => {

@@ -21,7 +21,7 @@ export default function CadastroAutor() {
     console.log(data)
     const resultado = await api.post ('https://livrariacrud-api.lucasgodoy04.repl.co/autores', data)
     console.log(resultado);
-    router.push('/autores')
+    router.push('/listaAutores')
   }
   
   return (    
@@ -42,7 +42,7 @@ export default function CadastroAutor() {
            
          <div className="card-content-area">
            <label for="date"><br/>Data de Nascimento:<br/></label>
-           <input type="date" id="data" onChange= {handleInputChange} value = {form.data_nascimento}/>
+           <input type="date" id="data_nascimento" onChange= {handleInputChange} value = {form.data_nascimento}/>
          </div>
          </div>
          

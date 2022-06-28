@@ -17,13 +17,13 @@ export default function Cadastrol() {
       titulo: form.titulo,
       autorId: form.autor,
       editora: form.editora,
-      data_publicacao: form.data,
+      data_publicacao: form.data_publicacao,
       preco: form.preco,
     }
     console.log(data)
     const autor_response = await api.post ('https://livrariacrud-api.lucasgodoy04.repl.co/livros', data)
     console.log(autor_response);
-    router.push('/livros')
+    router.push('/listaLivros')
   }
   return (
     <div id="cadastro">
@@ -44,12 +44,12 @@ export default function Cadastrol() {
             <input type="text" id="editora" onChange= {handleInputChange} value = {form.editora}/>
            
             <label for="usuario"><br/>Preço<br/></label>
-            <input type="number" id="preço" onChange= {handleInputChange} value = {form.preco}/>
+            <input type="number" id="preco" onChange= {handleInputChange} value = {form.preco}/>
         </div>
           
           <div class="card-content-area">
             <label for="date"><br/>Data de Publicação:<br/></label>
-            <input type="date" onChange= {handleInputChange} value = {form.data}/>
+            <input id="data_publicacao" type="date" onChange= {handleInputChange} value = {form.data_publicacao}/>
           </div>
         </div>
         
